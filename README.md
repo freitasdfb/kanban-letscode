@@ -1,46 +1,33 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Let's Code Kanban
 
-In the project directory, you can run:
+Este projeto foi desenvolvido para o desafio técnico da let's code para frontend
 
-### `npm start`
+Para iniciar o projeto, basta executar o comando:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    npm run start
+ Este comando irá inicializar o projeto frontend, que está hospedado na porta **3000**
+Para acessá-lo via browser, acessar o endereço:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    http://localhost:3000
+Esse projeto parte do princípio de que já se esteja executando o serviço backend para qual ele foi escrito, rodando na porta **5000**
 
-### `npm test`
+O projeto consiste em um kanban básico com três colunas: "To do", "Doing" e "Done"
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Comece criando um card no botão "Create New Card", que o card criado vai primeiramente para a coluna 'To do'.
 
-### `npm run build`
+Deixei o usuário, senha e  url no código mesmo com o pensamento de que todo o ambiente seria rodado localmente;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A primeira requisição é feita no didMount do primeiro componente, que foi utilizado com um react hook, para que se possa pegar o **token jwt** do backend e armazená-lo no local storage. As demais requisições usam deste token para se autenticar no backend;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+No projeto foram utilizados princípios do Material Design, com base na biblioteca `'mui'` desenvolvida para react;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+O projeto foi inicializado a partir do script creact-react-app;
 
-### `npm run eject`
+Seus componentes foram pensados para um reuso, então boa parte deles pode ser importado em um componente para que se posso ser utilizado;
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Em boa parte deles usei styled components para estilização. Nenhum componente possui um arquivo css a parte para editar;
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Apenas em dois componentes foi necessário passar uma função callback via props para poder realizar um melhor workflow. Diante disso, eu até pensei que poderia ter usado redux, mas achei que seria uma grande implementação para um simples uso.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
