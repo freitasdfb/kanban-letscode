@@ -31,3 +31,5 @@ Em boa parte deles usei styled components para estilização. Nenhum componente 
 
 Apenas em dois componentes foi necessário passar uma função callback via props para poder realizar um melhor workflow. Diante disso, eu até pensei que poderia ter usado redux, mas achei que seria uma grande implementação para um simples uso.
 
+
+Obrigado pela oportunidade e espero ter satisfeito às expectativas!
